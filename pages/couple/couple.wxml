@@ -1,0 +1,42 @@
+<view class="container">
+<view class="img_wrap">
+    <image src="{{ img1 }}" mode='aspectFit'/>
+</view>
+<button bindtap="uploads" class="up">拍照/选取图片识别</button>
+
+<view class="img_wrap">
+    <image src="{{ img2 }}" mode='aspectFit'/>
+</view>
+<button bindtap="uploads" class="up">拍照/选取图片识别</button>
+
+  
+<form bindsubmit="submitForm">
+  <view>
+    <text>年龄1：</text>
+    <input name="age1" type="number" placeholder="请输入第一人年龄" />
+  </view>
+  <view>
+    <text>性别1：</text>
+    <input name="sexual1" placeholder="请输入第一人性别" />
+  </view>
+  <view>
+    <text>年龄2：</text>
+    <input name="age2" type="number" placeholder="请输入第二人年龄" />
+  </view>
+  <view>
+    <text>性别2：</text>
+    <input name="sexual2" placeholder="请输入第二人性别" />
+  </view>
+  <view>
+    <text>恋爱时间：</text>
+    <input name="time" placeholder="请输入恋爱时间" />
+  </view>
+  <view>
+    <text>见面频次：</text>
+    <input name="times" placeholder="请输入见面频次" />
+  </view>
+  <view>
+    <button formType="submit">提交</button>
+  </view>
+</form>
+ </view>

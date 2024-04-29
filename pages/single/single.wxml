@@ -1,0 +1,21 @@
+<view class="container">
+<view class="img_wrap">
+    <image src="{{ img }}" mode='aspectFit'/>
+</view>
+<button bindtap="uploads" class="up">拍照/选取图片识别</button>
+
+  
+<form bindsubmit="submitForm">
+  <view>
+    <text>年龄：</text>
+    <input name="age" type="number" placeholder="请输入年龄" />
+  </view>
+  <view>
+    <text>性别：</text>
+    <input name="sexual" placeholder="请输入性别" />
+  </view>
+  <view>
+    <button formType="submit">提交</button>
+  </view>
+</form>
+ </view>

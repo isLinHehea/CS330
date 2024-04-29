@@ -1,0 +1,14 @@
+.weui-grid__icon {
+  width: 200px; /* 更改图片宽度 */
+  height: 200px; /* 更改图片高度 */
+}
+
+.weui-grid__icon image {
+  width: 100%; /* 图片宽度100%填充父容器 */
+  height: 100%; /* 图片高度100%填充父容器 */
+}
+
+.weui-grid__label {
+  font-size: 20px; /* 更改文字大小 */
+  text-align: center; /* 文本居中 */
+}
