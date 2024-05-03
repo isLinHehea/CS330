@@ -5,13 +5,13 @@ Page({
         id: '0',
         name: '单人情侣检索模式',
         url: '../../pages/single/single',
-        icon: '../../image/dishNine.png'
+        icon: '../../image/Face_HL.png'
       },
       {
         id: '1',
         name: '情侣匹配程度计算模式',
         url: '../../pages/couple/couple',
-        icon: '../../image/carNine.png'
+        icon: '../../image/icon_API_HL.png'
       }
     ]
   },

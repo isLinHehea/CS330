@@ -4,12 +4,35 @@
     "pages/logs/logs",
     "pages/list/list",
     "pages/single/single",
-    "pages/couple/couple"
+    "pages/couple/couple",
+    "pages/record/record"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "weixin",
-    "navigationBarBackgroundColor": "#ffffff"
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff99aa",
+    "navigationBarTitleText": "iMED 眼睛里有你",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#1a1a1a",
+    "selectedColor": "#ff99aa",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "selectedIconPath": "image/TabBar/HomeIconColor.jpg",
+      "iconPath": "image/TabBar/HomeIconGrey.jpg",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/list/list",
+      "selectedIconPath": "image/TabBar/AccountIconColor.jpg",
+      "iconPath": "image/TabBar/AccountIconGrey.jpg",
+      "text": "模式"
+    },{
+      "pagePath": "pages/record/record",
+      "selectedIconPath": "image/TabBar/MissionIconColor.jpg",
+      "iconPath": "image/TabBar/MissionIconGrey.jpg",
+      "text": "记录"
+    }]
   },
   "style": "v2",
   "componentFramework": "glass-easel",

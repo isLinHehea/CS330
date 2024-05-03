@@ -16,6 +16,9 @@ Page({
     remark: ""
   },
   submitForm: function(e) {
+    wx.showLoading({
+      title: "努力分析中..."
+    });
     // 获取表单数据
     const formData = e.detail.value;
     // 发起网络请求，传递表单数据到后端
@@ -24,8 +27,19 @@ Page({
       method: 'POST',
       data: formData,
       success: function(res) {
+        const data = JSON.parse(res.data)
         // 请求成功处理
-        console.log('提交成功', res.data);
+        console.log('提交成功', data);
+        // 更新页面数据，显示后端返回结果
+        this.setData({
+          nemes: data.name,
+          age: data.age,
+          possibility: data.possibility,
+          img: data.img,
+          info: "匹配结果"
+        })
+
+
       },
       fail: function(err) {
         // 请求失败处理
@@ -52,11 +66,8 @@ Page({
           img: res.tempFilePaths[0],
           names: '',
           scores: ''
-        }),
-          wx.showLoading({
-            title: "努力分析中..."
-          })
-        }
+        })
+      }
     })
   },
   

@@ -1,5 +1,7 @@
 {
-  "navigationBarTitleText": "imed眼底里有你",
-  "navigationBarTextStyle": "white",
-  "navigationBarBackgroundColor": "#1CA1E2"
+  "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff99aa",
+    "navigationBarTitleText": "iMED 眼睛里有你",
+    "navigationBarTextStyle": "black"
 }
