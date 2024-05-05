@@ -1,12 +1,18 @@
 /**index.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
 page {
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.scrollarea {
-  flex: 1;
-  overflow-y: hidden;
 }
 
 .userinfo {
@@ -25,14 +31,6 @@ page {
   border-radius: 50%;
 }
 
-.user-motto-button {
-  background-color: #1CA1E2;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
 .avatar-wrapper {
   padding: 0;
   width: 56px !important;
@@ -43,8 +41,8 @@ page {
 
 .avatar {
   display: block;
-  width: 56px;
-  height: 56px;
+  width: 57px;
+  height: 57px;
 }
 
 .nickname-wrapper {
@@ -63,4 +61,12 @@ page {
 
 .nickname-input {
   flex: 1;
+}
+
+.user-motto-button {
+  background-color: #ff99aa;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
 }

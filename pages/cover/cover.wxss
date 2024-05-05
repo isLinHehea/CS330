@@ -1,0 +1,54 @@
+/**index.wxss**/
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(top,white,#ffe0e6,#ffadbb);
+}
+
+.title{
+  font-size: 37px;
+  font-weight: 700;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: 'Times New Roman', Times, serif;
+  background: -webkit-linear-gradient(left, #ffccd5,#ff99aa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 100px;
+}
+
+@keyframes animated-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 22px rgba(255,255,255,0);
+  }
+}
+
+.image {
+  width: 370px; /* 更改图片宽度 */
+  height: 370px; /* 更改图片高度 */
+}
+
+.image image {
+  width: 100%; /* 图片宽度100%填充父容器 */
+  height: 100%; /* 图片高度100%填充父容器 */
+}
+
+.button {
+  animation: animated-border 1.5s infinite;
+  background-color: white;
+  color:  #ff99aa;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+
+

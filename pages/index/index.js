@@ -11,15 +11,62 @@ Page({
     hasUserInfo: false,
     canIUseGetUserProfile: wx.canIUse('getUserProfile'),
     canIUseNicknameComp: wx.canIUse('input.type.nickname'),
+    touchS : [0,0],
+    touchE : [0,0]
   },
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  touchStart: function(e){
+    let sx = e.touches[0].pageX
+    let sy = e.touches[0].pageY
+    this.data.touchS = [sx,sy]
+  },
+  touchMove: function(e){
+    let sx = e.touches[0].pageX;
+    let sy = e.touches[0].pageY;
+    this.data.touchE = [sx, sy]
+  },
+  touchEnd: function(e){
+    let start = this.data.touchS
+    let end = this.data.touchE
+    console.log(start)
+    console.log(end)
+    if(start[0] < end[0] - 50){
+      console.log('右滑')
+    }else if(start[0] > end[0] + 50){
+      console.log('左滑')
+    }else{
+      console.log('静止')
+    }
+  },
+  onPullDownRefresh: function () {
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success: function (res) {
+        if (res.confirm) {//这里是点击了确定以后
+          console.log('用户点击确定')
+        } else {//这里是点击了取消以后
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  onReachBottom: function () {
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success: function (res) {
+        if (res.confirm) {//这里是点击了确定以后
+          console.log('用户点击确定')
+        } else {//这里是点击了取消以后
+          console.log('用户点击取消')
+        }
+      }
     })
   },
   handleButtonClick(){
+    console.log("hh")
     wx.navigateTo({
-      url: '../list/list'
+      url: '/pages/logs/logs',
     })
   },
   onChooseAvatar(e) {

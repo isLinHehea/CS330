@@ -3,15 +3,15 @@ Page({
     routers: [
       {
         id: '0',
-        name: '单人情侣检索模式',
+        name: '心动模式',
         url: '../../pages/single/single',
-        icon: '../../image/Face_HL.png'
+        icon: '../../image/single.png'
       },
       {
         id: '1',
-        name: '情侣匹配程度计算模式',
+        name: '情侣模式',
         url: '../../pages/couple/couple',
-        icon: '../../image/icon_API_HL.png'
+        icon: '../../image/couple.png'
       }
     ]
   },
@@ -82,7 +82,7 @@ Page({
    */
   onShareAppMessage: function () {
       return{
-        title:'X-AI玩转图像、文字、人脸识别'
+        title:'iMED 眼睛里有你'
       }
   }
 })

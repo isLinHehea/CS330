@@ -1,0 +1,33 @@
+<view class="container">
+<view class="title">
+  <text>匹配成功！</text>  
+</view>
+<view class="img_wrap1">
+    <image class="img1" src="../../image/heart.png"/>
+</view>
+<view class="title2">
+  <text>当我看着你，我的世界就只有你。你的眼睛是我唯一的宇宙。</text>  
+</view>
+<view class = "head">
+  <text>匹配图像信息</text>
+</view>
+<view class="img_wrap2">
+    <image class="img2" src="../../image/left.jpg"/>
+</view>
+
+<form class = "info_form">
+  <view class = "head">
+    <text>匹配个人信息</text>
+  </view>
+  <view class = "text">
+    <text>年龄：21</text>
+  </view>
+  <view class = "text">
+    <text>性别：女</text>
+  </view>
+  <view class = "text">
+    <text>匹配度：77%</text>
+  </view>
+</form>
+<button class="return" bindtap="return">返回</button>
+ </view>

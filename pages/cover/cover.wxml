@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">
+    <text>iMED 眼底里有你</text>  
+  </view>
+  <view class="image">  
+    <image src="../../image/main.png"/>  
+  </view>
+  <button class="button" bindtap="handleButtonClick">进入小程序</button>
+</view>
