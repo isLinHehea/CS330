@@ -13,19 +13,19 @@
   </view>
   <view>
     <text class = "text">男生年龄：</text>
-    <input class="ipt" name="age" type="number" placeholder="请输入您的年龄" />
+    <input class="ipt" name="age1" type="text" bindinput='getAge1'  placeholder="请输入您的年龄" />
   </view>
   <view>
     <text class = "text">女生年龄：</text>
-    <input class="ipt" name="age" type="number" placeholder="请输入您的年龄" />
+    <input class="ipt" name="age2" type="text" bindinput='getAge2'  placeholder="请输入您的年龄" />
   </view>
   <view>
     <text class = "text">恋爱时间：</text>
-    <input class="ipt" name="time" placeholder="请输入恋爱时间" />
+    <input type="text" bindinput='getTime'  name="time" class="ipt" placeholder="请输入恋爱时间" />
   </view>
   <view>
     <text class = "text">见面频次：</text>
-    <input class="ipt" name="times" placeholder="请输入见面频次" />
+    <input type="text" bindinput='getTimes'  name="times" class="ipt" placeholder="请输入见面频次" />
   </view>
 </form>
 <button class="submit" bindtap="submit">提交</button>

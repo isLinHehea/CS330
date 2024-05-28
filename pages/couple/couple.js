@@ -1,10 +1,10 @@
 Page({
   data: {
     motto: '情侣模式',
-    age: "",
-    gender: "",
-    probability: "",
-    words: "",
+    age1: "1",
+    age2: "2",
+    time: "3",
+    times: "4",
     img1: "../../image/eye.png",
     img2: "../../image/eye.png",
   },
@@ -29,6 +29,15 @@ Page({
           names: '',
           scores: ''
         })
+        wx.getFileSystemManager().readFile({
+          filePath:res.tempFilePaths[0],
+          encoding:'base64',
+          success:function(res){
+            that.setData({
+              picture1:res.data
+            })
+          }
+        })
       }
     })
   },
@@ -46,13 +55,60 @@ Page({
           names: '',
           scores: ''
         })
+        wx.getFileSystemManager().readFile({
+          filePath:res.tempFilePaths[0],
+          encoding:'base64',
+          success:function(res){
+            that.setData({
+              picture2:res.data
+            })
+          }
+        })
       }
     })
   },
+  getAge1:function(e){
+    this.data.age1 = e.detail.value;
+  },
+  getAge2:function(e){
+    this.data.age2 = e.detail.value;
+  },
+  getTime:function(e){
+    this.data.time = e.detail.value;
+  },
+  getTimes:function(e){
+    this.data.times = e.detail.value;
+  },
   submit: function(e) {
+    console.log(this.data.age1);
+    console.log(this.data.age2);
+    console.log(this.data.time);
+    console.log(this.data.times);
+    console.log(this.data.picture1);
+    console.log(this.data.picture2);
     wx.showLoading({
       title: "努力分析中..."
     });
+    wx.request({
+      url: 'http://localhost:8888/couple',
+      method:'post',
+      header:{
+        'content-type':'application/json'
+      },
+      data:{
+        "img_1":this.data.picture1,
+        "img_2":this.data.picture2,
+      },
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          "result": res.data.result
+        });
+      },
+      fail: (err) => {
+        console.log('请求失败', err);
+      },
+    })
     setTimeout(function(){
       wx.hideLoading({});
       wx.navigateTo({
@@ -81,8 +137,11 @@ Page({
     //   },
     //   fail: function(err) {
     //     // 请求失败处理
-    //     console.log('提交失败', err);
+    //     console.log('提交失败', eprr);
     //   }
     // });
+  },
+  onShow: function () {
+    wx.showTabBar();
   },
 });
