@@ -1,16 +1,20 @@
 Page({
   data: {
     motto: '心动模式结果',
-    age: "",
+    name: "",
     gender: "",
-    probability: "",
-    words: "",
-    img: "../../image/eye.png"
+    result: 0,
+    img: "",
+    content: "",
   },
   onLoad: function (options) {
     console.info(options)
+
     this.setData({
-      img: data.img,
+      result: (parseFloat(options.result) * 100).toFixed(2),
+      name: options.name,
+      img: 'data:image/png;base64,' + options.picture,
+      content: options.content,
     })
   },
   return: function(e) {

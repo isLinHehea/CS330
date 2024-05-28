@@ -6,16 +6,16 @@
     <image class="img1" src="../../image/heart.png"/>
 </view>
 <view class="title2">
-  <text>每次我们对视，我都感觉时间在凝固，只有我们的眼神在流动，那是我们的爱在舞动。</text>  
+  <text>{{content}}</text>  
 </view>
 <view class = "head">
   <text>情侣图像信息</text>
 </view>
 <view class="img_wrap2">
-    <image class="img2" src="../../image/left.jpg"/>
+    <image class="img2" src="{{img1}}"/>
 </view>
 <view class="img_wrap2">
-    <image class="img2" src="../../image/left.jpg"/>
+    <image class="img2" src="{{img2}}"/>
 </view>
 
 <form class = "info_form">
@@ -23,7 +23,7 @@
     <text>情侣匹配信息</text>
   </view>
   <view class = "text">
-    <text>匹配度：77%</text>
+    <text>匹配度：{{result}}%</text>
   </view>
 </form>
 <button class="return" bindtap="return">返回</button>

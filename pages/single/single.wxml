@@ -8,12 +8,12 @@
     <text>个人信息</text>
   </view>
   <view>
-    <text class = "text">年龄：</text>
-    <input class="ipt" name="age" type="number" placeholder="请输入您的年龄" />
+    <text class = "text">姓名：</text>
+    <input class="ipt" name="name" type="text" bindinput='getName'  placeholder="请输入您的姓名" />
   </view>
   <view>
     <text class = "text">性别：</text>
-    <input class="ipt" name="gender" placeholder="请输入您的性别" />
+    <input class="ipt" name="gender" type="text" bindinput='getGender'  placeholder="请输入您的性别" />
   </view>
 </form>
 <button class="submit" bindtap="submit">提交</button>

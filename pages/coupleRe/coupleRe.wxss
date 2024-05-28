@@ -44,14 +44,14 @@
 }
 
 .img_wrap1{
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   margin-top: -40px;
 }
 
 .img1{
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
 }
 
 .img_wrap2{

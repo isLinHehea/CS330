@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="title">
-    <text>iMED 眼底里有你</text>  
+    <text>iMED 眼睛里有你</text>  
   </view>
   <view class="image">  
     <image src="../../image/main.png"/>  
